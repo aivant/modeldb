@@ -1,5 +1,5 @@
-image: vertaaiofficial/modeldb-frontend
-imageTag: 2.0.8.1
+image: gcr.io/vantai-analysis/modeldb-frontend
+imageTag: 2.0.8.2
 tolerations: []
 resources:
   limits:

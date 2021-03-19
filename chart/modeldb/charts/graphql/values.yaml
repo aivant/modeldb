@@ -1,4 +1,4 @@
-image: vertaaiofficial/modeldb-graphql
+image: gcr.io/vantai-analysis/modeldb-graphql
 imageTag: 2.0.8.1
 tolerations: []
 resources:
