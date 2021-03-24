@@ -1,5 +1,5 @@
 image: gcr.io/vantai-analysis/modeldb-frontend
-imageTag: 2.0.8.2
+imageTag: latest
 tolerations: []
 resources:
   limits:
