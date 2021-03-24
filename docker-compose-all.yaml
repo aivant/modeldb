@@ -1,7 +1,7 @@
 version: "3.5"
 services:
     modeldb-backend:
-        image: vertaaiofficial/modeldb-backend:2.0.8.1
+        image: gcr.io/vantai-analysis/modeldb-backend:2.0.8.1
         container_name: "modeldb-backend"
         expose:
             - "8085"
@@ -19,7 +19,7 @@ services:
             - ./data/artifact-store:/artifact-store/
 
     modeldb-proxy:
-        image: vertaaiofficial/modeldb-proxy:2.0.8.1
+        image: gcr.io/vantai-analysis/modeldb-proxy:2.0.8.1
         container_name: "modeldb-proxy"
         environment:
             MDB_ADDRESS: "modeldb-backend:8085"
@@ -34,7 +34,7 @@ services:
             - modeldb_network
 
     modeldb-graphql:
-        image: vertaaiofficial/modeldb-graphql:2.0.8.1
+        image: gcr.io/vantai-analysis/modeldb-graphql:2.0.8.1
         container_name: "modeldb-graphql"
         environment:
             MDB_ADDRESS: "modeldb-backend:8085"
@@ -50,7 +50,7 @@ services:
             - modeldb_network
 
     modeldb-frontend:
-        image: vertaaiofficial/modeldb-frontend:2.0.8.2
+        image: gcr.io/vantai-analysis/modeldb-frontend:2.0.8.2
         container_name: "modeldb-frontend"
         expose:
             - "3000"
