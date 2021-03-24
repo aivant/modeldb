@@ -1,2 +1,2 @@
 all:
-	cd ../..; docker build -t vertaaiofficial/modeldb-graphql -f backend/graphql/Dockerfile .; cd backend/graphql/
+	cd ../..; docker build -t gcr.io/vantai-analysis/modeldb-graphql -f backend/graphql/Dockerfile .; cd backend/graphql/

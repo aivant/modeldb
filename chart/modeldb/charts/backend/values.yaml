@@ -16,7 +16,7 @@ service:
 
 proxy:
   image: gcr.io/vantai-analysis/modeldb-proxy
-  imageTag: 2.0.8.1
+  imageTag: latest
   resources:
     limits:
       cpu: 500m

@@ -35,13 +35,13 @@ This proxy provides a REST+JSON interface to the gRPC backend, which is used by 
        - ENV SERVER_HTTP_PORT 3000
     ```
 
-* To build it, just run `make` and an image called `vertaaiofficial/modeldb-proxy` will be created in your local docker system.
+* To build it, just run `make` and an image called `gcr.io/vantai-analysis/modeldb-proxy` will be created in your local docker system.
 
 * Execute following command to run proxy on docker
 
     ```bash
-    docker run -it -p 3000:3000 vertaaiofficial/modeldb-proxy
-    ``` 
+    docker run -it -p 3000:3000 gcr.io/vantai-analysis/modeldb-proxy
+    ```
 
 * Use following URL for testing to check setup works properly:
 

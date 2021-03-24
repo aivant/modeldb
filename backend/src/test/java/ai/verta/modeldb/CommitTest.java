@@ -710,7 +710,7 @@ public class CommitTest extends TestsInit {
     return Blob.newBuilder()
         .setEnvironment(
             EnvironmentBlob.newBuilder()
-                .addCommandLine("docker pull vertaaiofficial/modeldb-backend:latest")
+                .addCommandLine("docker pull gcr.io/vantai-analysis/modeldb-backend:latest")
                 .setDocker(
                     DockerEnvironmentBlob.newBuilder()
                         .setRepository("Repo-" + new Date().getTime())
