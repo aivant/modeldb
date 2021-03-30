@@ -8,6 +8,29 @@ from . import _VertaDataType
 
 
 class DiscreteHistogram(_VertaDataType):
+    """
+    Representation of a discrete histogram.
+
+    Parameters
+    ----------
+    buckets : list of str
+        Bucket labels.
+    data : list of int
+        Counts for each bucket.
+
+    Examples
+    --------
+    .. code-block:: python
+
+        from verta.data_types import DiscreteHistogram
+        data = DiscreteHistogram(
+            buckets=["yes", "no"],
+            data=[10, 20],
+        )
+        run.log_attribute("response_histogram", data)
+
+    """
+
     _TYPE_NAME = "discreteHistogram"
     _VERSION = "v1"
 
@@ -27,4 +50,12 @@ class DiscreteHistogram(_VertaDataType):
                 "buckets": self._buckets,
                 "data": self._data,
             }
+        )
+
+    @classmethod
+    def _from_dict(cls, d):
+        data = d[cls._TYPE_NAME]
+        return cls(
+            buckets=data["buckets"],
+            data=data["data"],
         )
